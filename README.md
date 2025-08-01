@@ -18,20 +18,7 @@
   <br><br><br>
 </p>
 
-# A propos
-Projet d'étude pour les élèves de CESI monté en 3 phases
-- DevSecOps GitFlow Déploiement ARM Azure Client Serveur (3Tiers)
-- GitOps Déploiement Kubernetes Client Serveur (3Tiers)
-- GitOps Déploiement Kubernetes MicroService
+# Rappel commande
+Start mariadb en local
 
-## Fonctionnalitées
-- Strictement aucune c'est un projet d'étude. 
-- Hey What did you expect ?
-
-## Pré-requis
-- Fallait suivre les cours 
-(c'est dur comme phrase ça non ?)
-
-# Vidéos
-
-A venir
+```docker compose -f docker-local-bdd.yml up -d```
