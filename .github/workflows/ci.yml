@@ -6,10 +6,21 @@ on:
   pull_request:
   workflow_dispatch:
 
+permissions:
+  contents: read
+
 jobs:
 
   call-workflow-testing-pipeline:
     uses: h-khribich/hamzaaction_demo_fork/.github/workflows/testingPipeline.yml@main
+    analysis:
+    # ⬇️ Permissions nécessaires pour CodeQL + Sonar PR decoration
+      permissions:
+        security-events: write   # ← requis par CodeQL pour publier les résultats
+        contents: read           # ← lecture du repo
+        actions: read            # ← recommandé par CodeQL
+        packages: read           # ← si packs CodeQL privés
+        pull-requests: write     # ← pour que SonarCloud décore la PR
 
   call-workflow-security-pipeline:
     uses: h-khribich/hamzaaction_demo_fork/.github/workflows/securityPipeline.yml@main
