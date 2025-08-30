@@ -1,0 +1,11 @@
+
+on: [pull_request, push]
+
+jobs:
+
+  call-workflow-testing-pipeline:
+    uses: h-khribich/hamzaaction_demo_fork/.github/workflows/testingPipeline.yml@main
+
+  call-workflow-security-pipeline:
+    uses: h-khribich/hamzaaction_demo_fork/.github/workflows/securityPipeline.yml@main
+    secrets: inherit
