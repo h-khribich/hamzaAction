@@ -5,7 +5,7 @@ const registerCodeCoverageTaks = ccModule.default
 export default defineConfig({
   video: true,
   env: {
-    frontURL: "http://localhost:5173"
+    frontURL: "http://127.0.0.1:5173"
   },
   e2e: {
     setupNodeEvents(on, config) {
